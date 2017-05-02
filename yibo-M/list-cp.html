@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>艺博教育</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+    <link rel="stylesheet" href="css/list-cp.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+
+
+</head>
+
+<body>
+
+    <div class="page-group">
+        <!-- 你的html代码 -->
+        <div class="page">
+            <header class="bar bar-nav open">
+                <a class="button button-link button-nav pull-left" href="/demos/card">
+                    <span class="icon icon-left"></span>
+                </a>
+                <h1 class="title">标题</h1>
+            </header>
+            <div class="content">
+                <!-- Slider -->
+                <div class="swiper-container banner" data-space-between="10">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/banne1.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="images/banne2.jpg" alt=""></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="page-index">
+                    <div class="course buttons-tab fixed-tab" data-offset="44">
+                        <a href="#" class="tab-link active fen-ico" data-filter="all">
+                            <span class="icon iconfont icon-all"></span>
+                            <span class="tab-label">全部</span>
+                        </a>
+                        <a href="#" class="tab-link fen-ico" data-filter=".xunlianying">
+                            <span class="icon iconfont icon-qizi"></span>
+                            <span class="tab-label">训练营</span>
+                        </a>
+                        <a href="#" class="tab-link fen-ico" data-filter=".chanpin">
+                            <span class="icon iconfont icon-hezi-shixin"></span>
+                            <span class="tab-label">产品</span>
+                        </a>
+                    </div>
+                    <div class="content-block full-list">
+                        <div class="portfolio-box">
+
+                            <div class="col-md-4 col-sm-6 mix xunlianying branding">
+                                <div class="item-list">
+                                    <a target="_blank" href="{$CATEGORYS[72][url]}">
+                                        <div class="header">
+                                            <img style="display:none;" alt="青少年启智训练营" src="{siteurl($siteid)}/statics/v2015/images/yb1-1.jpg">
+                                            <div style="background-image:url({siteurl($siteid)}/statics/v2015/images/yb1-1.jpg)" class="img-bg"></div>
+                                        </div>
+                                        <div class="center">
+                                            <div class="top">
+                                                <span class="item-title">青少年启智训练营</span>
+                                                <span class="item-status">报名中</span>
+                                            </div>
+                                            <div class="item-desc">
+                                                <span class="pull-left"><i class="iconfont icon-boshi"></i> 11-18周岁</span>
+                                                <span class="pull-right"><i class="iconfont icon-time"></i> 3天2夜</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 col-sm-6 mix chanpin branding">
+                                <div class="item-list">
+                                    <a target="_blank" href="{$CATEGORYS[74][url]}">
+                                        <div class="header">
+                                            <img style="display:none;" alt="青少年超级学习快车训练营 " src="{siteurl($siteid)}/statics/v2015/images/yb5-1.jpg">
+                                            <div style="background-image:url({siteurl($siteid)}/statics/v2015/images/yb5-1.jpg)" class="img-bg"></div>
+                                        </div>
+                                        <div class="center">
+                                            <div class="top">
+                                                <span class="item-title">青少年超级学习快车训练营 </span>
+                                                <span class="item-status">报名中</span>
+                                            </div>
+                                            <div class="item-desc">
+                                                <span class="pull-left"><i class="fa fa-graduation-cap"></i> 11-18周岁</span>
+                                                <span class="pull-right"><i class="fa fa-clock-o"></i> 2天1夜</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel-overlay"></div>
+    <!-- Left Panel with Reveal effect -->
+    <div class="panel panel-left panel-reveal theme-dark" id="panel-left-demo">
+        <div class="content-block">
+            <p>这是一个侧栏</p>
+            <p>你可以在这里放用户设置页面</p>
+            <p><a href="#" class="close-panel">关闭</a></p>
+        </div>
+        <div class="list-block">
+            <!-- .... -->
+        </div>
+    </div>
+
+    <script type="text/javascript" src="http://g.alicdn.com/sj/lib/zepto/zepto.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://www.yibo365.cn/statics/v2015/js/mixitup.min.js"></script>
+    <script>
+        var containerEl = document.querySelector('.portfolio-box');
+        var mixer = mixitup(containerEl);
+    </script>
+    <script>
+        $.init()
+    </script>
+
+</body>
+
+</html>

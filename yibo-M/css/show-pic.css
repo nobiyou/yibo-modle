@@ -1,0 +1,93 @@
+.page {
+    background-color: #000;
+}
+.bar {
+    background-color: rgba(0, 0, 0, 0);
+}
+.bar::after {
+    display: none;
+}
+.title {
+    color: #fff;
+}
+.bar .button-link {
+    color: #fff;
+}
+.swipe {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    visibility: visible;
+    position: relative;
+}
+
+.piclist li {
+    text-align: center;
+    transition: 1s;
+}
+
+.piclist li img {
+    /*margin-top: calc(50% - 1rem);*/
+    width: 100%;
+    vertical-align: middle;
+}
+
+.piclist p {
+    display: none;
+}
+
+.piclist i {
+    display: inline-block;
+    height: calc(100% - 2.2rem);
+    vertical-align: middle
+}
+
+.count {
+    position: absolute;
+    bottom: 2.2rem;
+    left: 0;
+    padding: 20px 10px;
+    padding-right: 2%;
+    color: #fff;
+    width: 100%;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.count .sum {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+}
+.count .sum b {
+    font-size: 14px;
+    font-weight: normal;
+}
+.count .sum span {
+    display:inline;
+}
+.count .title-box {
+    width: 100%;
+    color: #fff;
+    padding-left: 50px;
+}
+
+.b_btn {
+    display: block;
+    height: 32px;
+    cursor: pointer;
+    line-height: 32px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    float: left;
+    background: #f5f5f5;
+    border-radius: 5px;
+}
+
+.intro {
+    display: none;
+    color: #fff;
+    width: 100%;
+    float: left;
+    padding-top: 8px;
+}

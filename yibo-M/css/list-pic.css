@@ -1,0 +1,91 @@
+.full-list {
+    margin: 0!important;
+    padding: 0!important;
+    top: 2rem;
+}
+
+.full-list .list-block ul {
+    background: none;
+}
+
+.bar .button-link {
+    color: #1cbaa4
+}
+.indexHeader {
+    display: block;
+    z-index: 999;
+    overflow: hidden;
+    position: fixed;
+    top: 2.2rem;
+    left: 0;
+    right: 0;
+}
+.buttons-tab {
+    overflow: hidden;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    z-index: 8;
+}
+.buttons-tab::after{
+content: '';
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 1px;
+background-image: -webkit-linear-gradient(top,transparent,transparent 40%,#ddd 0);
+background-size: 100% 1px;
+background-position: bottom;
+background-repeat: no-repeat;
+}
+.buttons-tab::-webkit-scrollbar {
+    display: none;
+}
+.buttons-tab .button.active {
+    color: #1cbaa4;
+    border-color: #1cbaa4;
+    z-index: 100;
+}
+.list-pic {
+    background-color: #fff;
+    position: relative;
+    margin-bottom: .5rem;
+}
+.list-pic .content-title {
+    margin: .5rem .75rem;
+    font-size: .75rem;
+}
+.list-pic .pic-btn {
+    position: absolute;
+    bottom: 2.75rem;
+    right: .75rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: .75rem;
+    padding: .1rem .4rem;
+    font-size: .65rem;
+    color: #fff;
+    line-height: 1rem;
+}
+.list-pic .watched-times {
+    color: #999;
+    font-size: .65rem;
+}
+
+.list-pic .message {
+    color: #5f646e;
+    font-size: .65rem;
+}
+.list-pic .message span {
+    padding: .1rem;
+}
+.list-link {
+    display: block;
+    position: relative;
+    min-height: 42px;
+    font-size: 0;
+    color: #5f646e;
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, .1);
+    -webkit-touch-callout: none;
+}

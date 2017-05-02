@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>艺博教育</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+    <link rel="stylesheet" href="css/list-js.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+
+</head>
+
+<body>
+
+    <div class="page-group">
+        <div class="page">
+            <header class="bar bar-nav open">
+                <a class="button button-link button-nav pull-left" href="/demos/card">
+                    <span class="icon icon-left"></span>
+                </a>
+                <h1 class="title">标题</h1>
+            </header>
+            <div class="content">
+                <div class="content-block news full-list">
+                    <!--div class="full">
+                        <ul>
+                            <li>
+                                <div class="js-list">
+                                <img src="images/1.jpg" alt="">
+                                </div>
+                                <h1>第一个的标题</h1>
+                                <p>这是内容这是内容这</p>
+                            </li>
+                            <li>
+                                <h1>第二个的标题</h1>
+                            </li>
+                            <li>
+                                <h1>第三个的标题</h1>
+                            </li>
+                            <li>
+                                <h1>第四个的标题</h1>
+                            </li>
+                            <li>
+                                <h1>第五个的标题</h1>
+                            </li>
+                        </ul>
+                        <div class="arrow arrow-right"><span class="icon icon-right"></span></div>
+                        <div class="arrow arrow-left"><span class="icon icon-left"></span></div>
+                    </div-->
+                    <div class="full-size">
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <div class="js-pic">
+                                        <img src="images/1.jpg" alt="">
+                                    </div>
+                                    <div class="js-title">
+                                        <h1>第一个的标题</h1>
+                                        <p>这是内容这是内容这</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <h1>第二个的标题</h1>
+                            </li>
+                            <li>
+                                <h1>第三个的标题</h1>
+                            </li>
+                            <li>
+                                <h1>第四个的标题</h1>
+                            </li>
+                            <li>
+                                <h1>第五个的标题</h1>
+                            </li>
+                        </ul>
+                        <div class="arrow arrow-right"><span class="icon icon-right"></span></div>
+                        <div class="arrow arrow-left"><span class="icon icon-left"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="http://g.alicdn.com/sj/lib/zepto/zepto.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js" charset="utf-8"></script>
+    <script src="js/swipeSlide.min.js"></script>
+    <script>
+        $(function() {
+            $('.full-size').swipeSlide({
+                autoSwipe: false,
+                firstCallback: function(i, sum) {
+                    $('.arrow-right').show();
+                    $('.full-size li').first().addClass('cur');
+                },
+                callback: function(i, sum) {
+                    if (i <= 0) {
+                        $('.arrow-right').show();
+                    } else {
+                        $('.arrow-right').hide();
+                    }
+                    if (i + 1 >= sum) {
+                        $('.arrow-left').show();
+                    } else {
+                        $('.arrow-left').hide();
+                    }
+                    $('.full-size li').eq(i).addClass('cur').siblings().removeClass('cur');
+                }
+            });
+        });
+        $.init()
+    </script>
+
+</body>
+
+</html>

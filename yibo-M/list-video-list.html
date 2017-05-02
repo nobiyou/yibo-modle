@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>艺博教育</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+    <link rel="stylesheet" href="css/list-video.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+
+</head>
+
+<body>
+
+    <div class="page-group">
+        <div class="page">
+            <header class="bar bar-nav open">
+                <a class="button button-link button-nav pull-left" href="/demos/card">
+                    <span class="icon icon-left"></span>
+                </a>
+                <h1 class="title">标题</h1>
+            </header>
+            <div class="content">
+                <div class="content-block full-list infinite-scroll">
+                    <div class="list-block full-list">
+                        <ul class="list-container">
+                            {pc:content action="lists" catid="$v[catid]" num="4" order="inputtime DESC" moreinfo="1" } {loop $data $v}
+                            <li class="item-content full-list">
+                                <div class="list-video">
+                                    <a href="{$v[url]}" class="list-link">
+                                        <div class="content-title">{$v[title]}</div>
+                                        <div class="video-mask"></div>
+                                        <div class="header-pic">
+                                            <div valign="bottom" class="card-header color-white no-border no-padding">
+                                                <img class="card-cover" src="{thumb($v[thumb],622,350)}" alt="{$v[title]}">
+                                            </div>
+                                            <span class="video-btn"></span>
+                                        </div>
+                                        <div class="card-footer">
+                                            {php $db = pc_base::load_model('hits_model'); $_r = $db->get_one(array('hitsid'=>'c-'.$modelid.'-'.$v[id])); $views = $_r[views]; } {php $comment_tag = pc_base::load_app_class("comment_tag", "comment"); $comment_total = $comment_tag->count(array('commentid'=>'content_'.$v[catid].'-'.$v[id].'-'.$modelid));}
+                                            <span class="watched-times"><span>{$views}</span>次观看</span>
+                                            <span class="message cy_cmt_count" id="url::{$v[url]}"><span class="icon iconfont icon-message"></span></span>
+                                            <script id="cy_cmt_num" src="https://changyan.sohu.com/upload/plugins/plugins.list.count.js?clientId=cysUqkfJU">
+                                            </script>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            {/loop} {/pc}
+                        </ul>
+                    </div>
+                    <!-- 加载提示符 -->
+                    <div class="infinite-scroll-preloader">
+                        <div class="preloader"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="http://g.alicdn.com/sj/lib/zepto/zepto.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js" charset="utf-8"></script>
+    <script>
+        $.init()
+    </script>
+
+</body>
+
+</html>

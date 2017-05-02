@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>艺博教育</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+    <link rel="stylesheet" href="css/show-pic.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+
+</head>
+
+<body>
+
+    <div class="page-group">
+        <div class="page">
+            <header class="bar bar-nav open">
+                <a class="button button-link button-nav pull-left" href="list-video.html">
+                    <span class="icon icon-left"></span>
+                </a>
+                <h1 class="title">标题</h1>
+            </header>
+            <div class="content article ">
+                <div class="page-index">
+                    <div class="hdp-box">
+
+
+
+                        <div id="slider" class="swipe">
+                            <ul class="piclist">
+                                <li>
+                                    <p>明3:45尤文蓝军生死战</p><i></i><img src="images/banne1.jpg"></li>
+                                <li>
+                                    <p>赛季巡礼福建:王哲林领衔青年军</p><i></i><img src="images/banne2.jpg"></li>
+                                <li>
+                                    <p>《现代战争4 零爆点》新视频放出 热血满点《现代战争4 零爆点》新视频放出 热血满点《现代战争4 零爆点》新视频放出 热血满点《现代战争4 零爆点》新视频放出 热血满点《现代战争4 零爆点》新视频放出 热血满点《现代战争4 零爆点》新视频放出 热血满点《现代战争4 零爆点》新视频放出 热血满点《现代战争4 零爆点》新视频放出 热血满点</p><i></i><img src="images/1.jpg"></li>
+                                <li>
+                                    <p>曼联拟5000万购德国双星</p><i></i><img src="images/3.jpg"></li>
+                            </ul>
+                        </div>
+
+                        <div class="count">
+                            <div class="sum">
+                                <span class="icon iconfont icon-album"> <b class="bi">1</b>/<b class="bcount"></b></span>
+                                <div class="title-box">明3:45尤文蓝军生死战</div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript" src="http://g.alicdn.com/sj/lib/zepto/zepto.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/touchslider.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            var num = $('#slider').find('li').size();
+            $('.bcount').text(num);
+            $('.b_btn').click(function() {
+                $(this).toggleClass('b_btn_active');
+                $('.intro').toggle();
+            })
+        })
+        var tt = new TouchSlider({
+            id: 'slider',
+            'auto': '-1',
+            fx: 'ease-out',
+            direction: 'left',
+            speed: 600,
+            timeout: 5000,
+            'before': function(index) {
+                var es = document.getElementById('slider').getElementsByTagName('li');
+                var it = $(es[index]).index() + 1;
+                $('.bi').text(it);
+                var tx = $(es[index]).find('p').text();
+                $('.title-box').text(tx);
+            }
+        });
+        $.init();
+    </script>
+
+</body>
+
+</html>
